@@ -256,7 +256,7 @@ const achievementSection = {
     {
       title: "Programming in Java (Elite)",
       subtitle: "NPTEL",
-      image: "https://ia.iitm.ac.in/images/nptel.png",
+      image: "https://stories.nptel.ac.in/wp-content/uploads/2024/01/nptel-logo-300x300.png",
       imageAlt: "NPTEL Logo",
       footerLink: []
     },

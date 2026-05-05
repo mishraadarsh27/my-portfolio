@@ -1,9 +1,9 @@
 @import "../../_globalColor";
 
 .card-image {
-  max-width: 100%;
-  height: auto;
-  width: 250px;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 .card-title {
   color: $titleColor;
@@ -38,11 +38,12 @@
 }
 .certificate-image-div {
   position: relative;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 .achievement-cards-div {
   display: grid;
