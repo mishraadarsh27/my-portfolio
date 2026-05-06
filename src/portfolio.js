@@ -264,7 +264,7 @@ const achievementSection = {
     {
       title: "Programming in Java (Elite)",
       subtitle: "NPTEL",
-      image: nptelLogo,
+      image: "https://raw.githubusercontent.com/mishraadarsh27/my-portfolio/main/src/assets/images/nptel_logo.png",
       imageAlt: "NPTEL Logo",
       footerLink: []
     },
