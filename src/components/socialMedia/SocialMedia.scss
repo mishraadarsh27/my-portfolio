@@ -68,6 +68,18 @@
   background-color: $instagram;
 }
 
+.leetcode i {
+  background-color: $leetcode;
+}
+
+.gfg i {
+  background-color: $gfg;
+}
+
+.whatsapp i {
+  background-color: $whatsapp;
+}
+
 /* Hover Transition */
 .twitter i:hover,
 .google i:hover,
@@ -78,6 +90,9 @@
 .instagram i:hover,
 .stack-overflow i:hover,
 .kaggle i:hover,
+.leetcode i:hover,
+.gfg i:hover,
+.whatsapp i:hover,
 .medium i:hover {
   background-color: $textColor;
 }

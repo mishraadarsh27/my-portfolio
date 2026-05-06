@@ -36,6 +36,9 @@ const socialMediaLinks = {
   github: "https://github.com/mishraadarsh27",
   linkedin: "https://linkedin.com/in/adarsh-mishra-9b394b28b/",
   gmail: "adarsh22mishra@gmail.com",
+  leetcode: "https://leetcode.com/i_adarshmishra",
+  gfg: "https://auth.geeksforgeeks.org/user/adarsh22mishra",
+  whatsapp: "https://wa.me/917482068656",
   gitlab: "",
   facebook: "",
   medium: "",
@@ -263,7 +266,8 @@ const achievementSection = {
     {
       title: "Programming in Java (Elite)",
       subtitle: "NPTEL",
-      image: "https://raw.githubusercontent.com/mishraadarsh27/my-portfolio/main/src/assets/images/nptel_logo.png",
+      image:
+        "https://raw.githubusercontent.com/mishraadarsh27/my-portfolio/main/src/assets/images/nptel_logo.png",
       imageAlt: "NPTEL Logo",
       footerLink: []
     },
@@ -327,7 +331,8 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+91-7482068656",
-  email_address: "adarsh22mishra@gmail.com"
+  email_address: "adarsh22mishra@gmail.com",
+  whatsapp_link: "https://wa.me/917482068656"
 };
 
 // Twitter Section
@@ -338,6 +343,40 @@ const twitterDetails = {
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+
+const competitiveProgramming = {
+  title: "Competitive Programming",
+  subtitle: "ANALYTICS & CODING PROFILES",
+  display: true,
+  profiles: [
+    {
+      platform: "LeetCode",
+      username: "i_adarshmishra",
+      profileLink: "https://leetcode.com/i_adarshmishra",
+      solved: 262,
+      easy: 139,
+      medium: 108,
+      hard: 15,
+      rating: "1596",
+      ranking: "208,004 (Global)",
+      topics: ["Array", "String", "Hash Table", "DP"],
+      languages: ["C++", "Java", "Python"]
+    },
+    {
+      platform: "GeeksforGeeks",
+      username: "adarsh22mishra",
+      profileLink: "https://auth.geeksforgeeks.org/user/adarsh22mishra",
+      solved: 280,
+      easy: 85, // Basic (13) + Easy (72)
+      medium: 162,
+      hard: 33,
+      score: "1052",
+      ranking: "55 (Institute Rank)",
+      topics: ["Tree", "Array", "DP", "Matrix", "Strings"],
+      languages: ["C++", "Java"]
+    }
+  ]
+};
 
 export {
   illustration,
@@ -351,6 +390,7 @@ export {
   openSource,
   bigProjects,
   achievementSection,
+  competitiveProgramming,
   blogSection,
   talkSection,
   podcastSection,

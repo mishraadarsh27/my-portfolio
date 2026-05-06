@@ -49,6 +49,20 @@ export default function Contact() {
               </a>
               <br />
               <br />
+              {contactInfo.whatsapp_link && (
+                <>
+                  <a
+                    className="contact-detail"
+                    href={contactInfo.whatsapp_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                  <br />
+                  <br />
+                </>
+              )}
               <SocialMedia />
             </div>
           </div>
