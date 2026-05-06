@@ -4,6 +4,7 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import nptelLogo from "./assets/images/nptel_logo.png";
 
 // Splash Screen
 
@@ -54,7 +55,9 @@ const skillsSection = {
     emoji(
       "⚡ Develop highly interactive Front end / User Interfaces for your web applications"
     ),
-    emoji("⚡ Experience in building and deploying scalable applications using React.js and Python (Flask)"),
+    emoji(
+      "⚡ Experience in building and deploying scalable applications using React.js and Python (Flask)"
+    ),
     emoji(
       "⚡ Skilled in REST API development, CRUD operations, authentication, and responsive design"
     )
@@ -184,7 +187,8 @@ const bigProjects = {
     {
       image: "",
       projectName: "MediParse AI",
-      projectDesc: "Developed an AI-powered medical report parser to extract and summarize health insights. Designed a responsive React.js interface improving user experience.",
+      projectDesc:
+        "Developed an AI-powered medical report parser to extract and summarize health insights. Designed a responsive React.js interface improving user experience.",
       footerLink: [
         {
           name: "Visit Website",
@@ -199,7 +203,8 @@ const bigProjects = {
     {
       image: "",
       projectName: "Safe Transit",
-      projectDesc: "Built a transportation platform with route tracking and user interaction features. Implemented responsive UI design ensuring cross-device compatibility.",
+      projectDesc:
+        "Built a transportation platform with route tracking and user interaction features. Implemented responsive UI design ensuring cross-device compatibility.",
       footerLink: [
         {
           name: "Visit Website",
@@ -214,7 +219,8 @@ const bigProjects = {
     {
       image: "",
       projectName: "Monad Polls",
-      projectDesc: "Developed a real-time polling platform with dynamic UI components. Implemented voting and result visualization features.",
+      projectDesc:
+        "Developed a real-time polling platform with dynamic UI components. Implemented voting and result visualization features.",
       footerLink: [
         {
           name: "Visit Website",
@@ -242,28 +248,31 @@ const achievementSection = {
     {
       title: "Java Full Stack Development",
       subtitle: "EduSkills (AICTE Certified)",
-      image: "https://eduskillsfoundation.org/wp-content/uploads/2022/09/LOGO_EduSkills.png",
+      image:
+        "https://eduskillsfoundation.org/wp-content/uploads/2022/09/LOGO_EduSkills.png",
       imageAlt: "EduSkills Logo",
       footerLink: []
     },
     {
       title: "AI Foundation",
       subtitle: "Oracle",
-      image: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
       imageAlt: "Oracle Logo",
       footerLink: []
     },
     {
       title: "Programming in Java (Elite)",
       subtitle: "NPTEL",
-      image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/NPTEL_logo.png/320px-NPTEL_logo.png",
+      image: nptelLogo,
       imageAlt: "NPTEL Logo",
       footerLink: []
     },
     {
       title: "Junior Cybersecurity Analyst",
       subtitle: "Cisco",
-      image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cisco_logo-1000px.png",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cisco_logo-1000px.png",
       imageAlt: "Cisco Logo",
       footerLink: []
     }
