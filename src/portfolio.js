@@ -119,7 +119,7 @@ const educationInfo = {
       logo: "",
       subHeader: "B.Tech in Computer Science & Engineering",
       duration: "May 2023 - Present",
-      desc: "CGPA: 7.07",
+      desc: "CGPA: 8.41",
       descBullets: [
         "Specializing in Computer Science and Engineering",
         "Active involvement in technical projects and development"

@@ -15,6 +15,8 @@ import {
   resumeSection
 } from "../../portfolio";
 
+import {NavLink, Link} from "react-router-dom";
+
 function Header() {
   const {isDark} = useContext(StyleContext);
   const viewExperience = workExperiences.display;
@@ -29,11 +31,11 @@ function Header() {
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
-        </a>
+        </Link>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label
           className="menu-icon"
@@ -43,51 +45,74 @@ function Header() {
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
+          <li>
+            <NavLink
+              to="/"
+              activeStyle={{fontWeight: "bold"}}
+              exact
+            >
+              Home
+            </NavLink>
+          </li>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              <NavLink
+                to="/skills"
+                activeStyle={{fontWeight: "bold"}}
+              >
+                Skills
+              </NavLink>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
+              <NavLink
+                to="/education"
+                activeStyle={{fontWeight: "bold"}}
+              >
+                Work Experiences
+              </NavLink>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements">Achievements</a>
+              <NavLink
+                to="/achievements"
+                activeStyle={{fontWeight: "bold"}}
+              >
+                Achievements
+              </NavLink>
             </li>
           )}
           {viewCompetitiveProgramming && (
             <li>
-              <a href="#coding-stats">Coding Stats</a>
+              <NavLink
+                to="/coding-stats"
+                activeStyle={{fontWeight: "bold"}}
+              >
+                Coding Stats
+              </NavLink>
             </li>
           )}
           {viewBlog && (
             <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )}
-          {viewResume && (
-            <li>
-              <a href="#resume">Resume</a>
+              <NavLink
+                to="/blogs"
+                activeStyle={{fontWeight: "bold"}}
+              >
+                Blogs
+              </NavLink>
             </li>
           )}
           <li>
-            <a href="#contact">Contact Me</a>
+            <NavLink
+              to="/contact"
+              activeStyle={{fontWeight: "bold"}}
+            >
+              Contact Me
+            </NavLink>
           </li>
           <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>
               <ToggleSwitch />
             </a>

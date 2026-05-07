@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+import {HashRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
@@ -21,6 +23,14 @@ import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
+
+const ScrollToTop = () => {
+  const {pathname} = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -49,26 +59,59 @@ const Main = () => {
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         {isShowingSplashAnimation && splashScreen.enabled ? (
           <SplashScreen />
-        ) : (
-          <>
+         ) : (
+          <Router basename="/">
+            <ScrollToTop />
             <Header />
-            <Greeting />
-            <Skills />
-            <StackProgress />
-            <Education />
-            <WorkExperience />
-            <Projects />
-            <StartupProject />
-            <Achievement />
-            <CodingProfiles />
-            <Blogs />
-            <Talks />
-            <Twitter />
-            <Podcast />
-            <Profile />
+            <Switch>
+              <Route
+                path="/"
+                exact
+                render={props => (
+                  <>
+                    <Greeting {...props} />
+                    <Skills {...props} />
+                    <StackProgress {...props} />
+                    <Projects {...props} />
+                    <Twitter {...props} />
+                    <Podcast {...props} />
+                  </>
+                )}
+              />
+              <Route
+                path="/education"
+                render={props => (
+                  <>
+                    <Education {...props} />
+                    <WorkExperience {...props} />
+                  </>
+                )}
+              />
+              <Route
+                path="/projects"
+                render={props => (
+                  <>
+                    <Projects {...props} />
+                    <StartupProject {...props} />
+                  </>
+                )}
+              />
+              <Route
+                path="/coding-stats"
+                render={props => <CodingProfiles {...props} />}
+              />
+              <Route
+                path="/achievements"
+                render={props => <Achievement {...props} />}
+              />
+              <Route path="/blogs" render={props => <Blogs {...props} />} />
+              <Route path="/talks" render={props => <Talks {...props} />} />
+              <Route path="/contact" render={props => <Profile {...props} />} />
+              <Redirect to="/" />
+            </Switch>
             <Footer />
             <ScrollToTopButton />
-          </>
+          </Router>
         )}
       </StyleProvider>
     </div>
