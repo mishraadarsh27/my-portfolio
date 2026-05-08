@@ -6,12 +6,39 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   padding: 2rem;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 210, 255, 0.1);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
+
 .repo-card-div:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: 0 15px 35px rgba(0, 210, 255, 0.1);
+  transform: translateY(-8px);
+  border-color: #00d2ff;
+}
+
+.repo-card-div::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.repo-card-div:hover::after {
+  left: 150%;
 }
 
 .repo-stats {
@@ -90,6 +117,7 @@
 }
 
 .dark-card-mode:hover {
-  background-color: $buttonColor !important;
-  box-shadow: 0px 0px 16px $darkBoxShadow;
+  background-color: #242933 !important;
+  box-shadow: 0px 10px 30px rgba(0, 210, 255, 0.2);
+  border-color: #00d2ff;
 }
