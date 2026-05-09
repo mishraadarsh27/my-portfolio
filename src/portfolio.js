@@ -361,10 +361,10 @@ const competitiveProgramming = {
       platform: "LeetCode",
       username: "i_adarshmishra",
       profileLink: "https://leetcode.com/i_adarshmishra",
-      solved: 262,
-      easy: 139,
-      medium: 108,
-      hard: 15,
+      solved: 268,
+      easy: 142,
+      medium: 110,
+      hard: 16,
       rating: "1596",
       ranking: "208,004 (Global)",
       topics: ["Array", "String", "Hash Table", "DP"],
@@ -374,12 +374,12 @@ const competitiveProgramming = {
       platform: "GeeksforGeeks",
       username: "adarsh22mishra",
       profileLink: "https://auth.geeksforgeeks.org/user/adarsh22mishra",
-      solved: 280,
-      easy: 85, // Basic (13) + Easy (72)
-      medium: 162,
+      solved: 285,
+      easy: 88, // Basic (13) + Easy (75)
+      medium: 164,
       hard: 33,
-      score: "1052",
-      ranking: "55 (Institute Rank)",
+      score: "1072",
+      ranking: "53 (Institute Rank)",
       topics: ["Tree", "Array", "DP", "Matrix", "Strings"],
       languages: ["C++", "Java"]
     }
