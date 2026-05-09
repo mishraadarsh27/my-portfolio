@@ -8,10 +8,11 @@ Welcome to my personal portfolio repository! This project showcases my journey a
 I am a passionate Full Stack Developer with a strong foundation in **Data Structures and Algorithms**. I love building scalable web applications and exploring new technologies. Currently, I am focused on mastering React.js and Python-based backends.
 
 ## 🛠️ Tech Stack
-- **Frontend:** React.js, HTML5, CSS3, JavaScript (ES6+)
-- **Backend:** Python (Flask), Supabase
-- **Database:** PostgreSQL
-- **Tools:** Git, GitHub, VS Code, Postman
+- **Frontend:** React.js, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS
+- **Backend:** Python (Flask), Node.js, Supabase
+- **Database:** PostgreSQL, MySQL
+- **Tools:** Git, GitHub, VS Code, Postman, Vercel
+- **Profiles:** [LeetCode](https://leetcode.com/i_adarshmishra), [GeeksforGeeks](https://auth.geeksforgeeks.org/user/adarsh22mishra)
 
 ## 🚀 Key Projects
 - **MediParse AI:** An AI-powered platform for parsing and managing medical prescriptions.
