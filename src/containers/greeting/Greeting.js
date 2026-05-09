@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -7,6 +7,23 @@ import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+
+// Profile photo with circular glow frame — place profile.jpg in /public/
+function ProfilePhoto() {
+  const [imgError, setImgError] = useState(false);
+  if (imgError) return null; // Falls back silently if photo not yet added
+  return (
+    <div className="profile-photo-wrapper">
+      <img
+        src={`${process.env.PUBLIC_URL}/profile.jpg`}
+        alt="Adarsh Kumar - Full Stack Developer"
+        className="profile-photo"
+        onError={() => setImgError(true)}
+        loading="eager"
+      />
+    </div>
+  );
+}
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -66,6 +83,8 @@ export default function Greeting() {
             </div>
           </div>
           <div className="greeting-image-div">
+            {/* Show profile photo if available, else fall back to animation */}
+            <ProfilePhoto />
             {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
             ) : (

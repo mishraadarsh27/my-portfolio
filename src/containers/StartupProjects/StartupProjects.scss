@@ -60,6 +60,39 @@ $blue:   #3a7bd5;
   letter-spacing: 0.3px;
 }
 
+// ── Gradient preview banner (placeholder until real screenshots) ──────────────
+
+.project-card-gradient-preview {
+  height: 130px;
+  border-radius: 10px 10px 0 0;
+  margin: -1.75rem -1.75rem 16px -1.75rem; // bleed to card edges
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.project-preview-title {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0 16px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
 // ── Card shell ───────────────────────────────────────────────────────────────
 
 .project-card {

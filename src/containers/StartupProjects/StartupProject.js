@@ -4,6 +4,19 @@ import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
+// Maps a project's first tech tag to a gradient palette
+const TECH_GRADIENTS = {
+  "React.js": "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+  "Python":   "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)",
+  "Blockchain": "linear-gradient(135deg, #0f0c29, #302b63, #24243e)"
+};
+
+function getGradient(techTags) {
+  if (!techTags || techTags.length === 0)
+    return "linear-gradient(135deg, #1a1a2e, #4a4a8a)";
+  return TECH_GRADIENTS[techTags[0]] || "linear-gradient(135deg, #1a1a2e, #4a4a8a)";
+}
+
 const ProjectCard = React.memo(function ProjectCard({project, isDark}) {
   function openUrlInNewTab(url) {
     if (!url) return;
@@ -34,8 +47,12 @@ const ProjectCard = React.memo(function ProjectCard({project, isDark}) {
           />
         </div>
       ) : (
-        <div className="project-card-icon-placeholder">
-          <i className="fas fa-code" aria-hidden="true"></i>
+        <div
+          className="project-card-gradient-preview"
+          style={{background: getGradient(project.techTags)}}
+          aria-hidden="true"
+        >
+          <span className="project-preview-title">{project.projectName}</span>
         </div>
       )}
 

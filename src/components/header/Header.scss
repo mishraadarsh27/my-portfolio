@@ -61,11 +61,12 @@
 }
 
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-weight: 700;
+  color: #6c63ff;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 10px;
+  padding: 0 2px;
 }
 
 /* menu */

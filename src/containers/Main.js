@@ -81,7 +81,6 @@ const Main = () => {
                     <Projects {...props} />
                     <Twitter {...props} />
                     <Podcast {...props} />
-                    <Profile {...props} />
                     <Contact {...props} />
                   </>
                 )}

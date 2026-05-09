@@ -55,22 +55,13 @@ const skillsSection = {
   subTitle: "ARCHITECTING THE FUTURE WITH PYTHON, SCALABLE BACKENDS, AND HIGH-PERFORMANCE WEB SOLUTIONS",
   skills: [
     emoji(
-      "⚡ Masterful implementation of Backend architectures using Python ecosystems: Flask, FastAPI, and Django for mission-critical applications"
+      "⚡ Architecting scalable Python backends with Flask, FastAPI & Django — powering RESTful APIs with JWT/OAuth2 security"
     ),
     emoji(
-      "⚡ Engineered high-throughput RESTful APIs with advanced security protocols including JWT, OAuth2, and industry-standard authentication"
+      "⚡ Building pixel-perfect React.js frontends with dynamic state management and seamless full-stack integrations"
     ),
     emoji(
-      "⚡ Building sophisticated, pixel-perfect Front-end interfaces using React.js and modern state management patterns"
-    ),
-    emoji(
-      "⚡ Expert-level database orchestration with PostgreSQL and MySQL, leveraging advanced ORMs and query optimization techniques"
-    ),
-    emoji(
-      "⚡ Streamlining development workflows with Docker containerization and automated CI/CD pipelines for rapid, reliable deployment"
-    ),
-    emoji(
-      "⚡ Deep commitment to writing clean, maintainable code following SOLID principles and industry best practices"
+      "⚡ Deploying cloud-native apps on Vercel & Supabase with Docker-powered CI/CD pipelines for zero-downtime releases"
     )
   ],
 
@@ -263,7 +254,7 @@ const openSource = {
 
 const bigProjects = {
   title: "Projects",
-  subtitle: "SOME OF THE PROJECTS I HAVE BUILT",
+  subtitle: "Real-world problems I solved with code",
   projects: [
     {
       image: "",
