@@ -1,42 +1,62 @@
 @import "../../_globalColor";
 
+.software-skills-main-div {
+  margin-bottom: 30px;
+}
+
 .dev-icons {
   padding-left: 0;
   list-style: none;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 0px;
   margin-top: 0px;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 25px;
+  margin-bottom: 25px;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 
 .software-skill-inline:hover {
-  transform: scale(1.2) translateY(-5px);
+  transform: scale(1.2) translateY(-10px);
 }
 
 .software-skill-inline > i {
-  color: $subTitle;
+  color: #868e96;
   transition: all 0.3s ease;
 }
 
-.software-skill-inline > i:hover {
-  color: #00d2ff !important;
-  text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+.software-skill-inline:hover > i {
+  color: #3a7bd5 !important;
+  filter: drop-shadow(0 0 10px rgba(58, 123, 213, 0.6));
 }
 
 .software-skill-inline > p {
-  color: $subTitle;
-  font-size: 10px;
+  color: #868e96;
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 500;
   transition: all 0.3s ease;
+  opacity: 0.7;
 }
 
 .software-skill-inline:hover > p {
-  color: #00d2ff !important;
-  font-weight: bold;
+  color: #3a7bd5 !important;
+  opacity: 1;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .dev-icons {
+    justify-content: center;
+    font-size: 2.5rem;
+  }
 }

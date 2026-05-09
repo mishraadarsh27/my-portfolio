@@ -4,6 +4,8 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  padding: 40px 0;
+  align-items: center;
 }
 
 .skills-text-div {
@@ -22,8 +24,39 @@
 
 .skills-heading {
   font-size: 56px;
-  font-weight: 400;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Google Sans Regular";
 }
+
+.skills-text-subtitle {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.skills-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px !important;
+  display: flex;
+  align-items: flex-start;
+}
+
+.skills-text::before {
+  content: "▹";
+  color: #00d2ff;
+  margin-right: 10px;
+  font-size: 24px;
+  line-height: 1;
+}
+
 .subTitle {
   color: $subTitle;
 }
@@ -31,20 +64,17 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .skills-heading {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 @media (max-width: 768px) {
   .skills-heading {
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
   }
   .skills-main-div {
     flex-direction: column;
+    padding: 20px 0;
   }
   .skills-text-div {
     margin-left: 0px;
@@ -58,7 +88,7 @@
     text-align: center;
   }
   .skills-image-div {
-    /* display: none; */
     order: 2;
+    margin-top: 30px;
   }
 }
