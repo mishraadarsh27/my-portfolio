@@ -23,7 +23,7 @@ const greeting = {
   username: "Adarsh Kumar",
   title: "Hi all, I'm Adarsh",
   subTitle: emoji(
-    "An Aspiring Full Stack Developer 🚀 with strong skills in Data Structures, Algorithms, and Web Development. Experienced in building and deploying scalable applications using React.js, Python (Flask), and Supabase."
+    "A dedicated Full Stack Developer 🚀 with a passion for building high-performance web applications. Expertise in React.js, Python, and cloud technologies, complemented by a strong foundation in Data Structures and Algorithms."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1_uUDN1rdJUJmIeusi9y_NVYViCQu_3vA/view?usp=sharing", // Set to non-empty to show the button
@@ -104,6 +104,14 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "java",
       fontAwesomeClassname: "fab fa-java"
+    },
+    {
+      skillName: "Tailwind CSS",
+      fontAwesomeClassname: "fab fa-css3"
+    },
+    {
+      skillName: "Firebase",
+      fontAwesomeClassname: "fas fa-fire"
     }
   ],
   display: true // Set false to hide this section, defaults to true
