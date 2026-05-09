@@ -8,14 +8,14 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
-// Profile photo with circular glow frame — place profile.jpg in /public/
+// Profile photo — drop profile.jpg into /public/ to activate
 function ProfilePhoto() {
   const [imgError, setImgError] = useState(false);
-  if (imgError) return null; // Falls back silently if photo not yet added
+  if (imgError) return null;
   return (
     <div className="profile-photo-wrapper">
       <img
-        src={`${process.env.PUBLIC_URL}/profile.jpg`}
+        src="/my-portfolio/profile.jpg"
         alt="Adarsh Kumar - Full Stack Developer"
         className="profile-photo"
         onError={() => setImgError(true)}

@@ -52,7 +52,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Technical Prowess",
-  subTitle: "Python Web Developer · React.js · Cloud Deployments · REST APIs",
+  subTitle: "My core technical stack",
   skills: [
     emoji(
       "⚡ Architecting scalable Python backends with Flask, FastAPI & Django — powering RESTful APIs with JWT/OAuth2 security"
@@ -400,10 +400,10 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Contact Me 📬"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+91-7482068656",
+  number: "", // hidden — WhatsApp button kept below
   email_address: "adarsh22mishra@gmail.com",
   whatsapp_link: "https://wa.me/917482068656"
 };

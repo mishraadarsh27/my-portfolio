@@ -71,6 +71,7 @@ $blue:   #3a7bd5;
   justify-content: center;
   overflow: hidden;
   position: relative;
+  transition: box-shadow 0.35s ease;
 
   &::after {
     content: "";
@@ -78,6 +79,11 @@ $blue:   #3a7bd5;
     inset: 0;
     background: rgba(0, 0, 0, 0.25);
   }
+}
+
+// Glow on card hover (triggered by parent card hover)
+.project-card:hover .project-card-gradient-preview {
+  box-shadow: var(--hover-glow, 0 0 20px #6c63ff);
 }
 
 .project-preview-title {

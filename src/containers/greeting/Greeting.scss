@@ -10,25 +10,25 @@
 }
 
 .profile-photo {
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #6c63ff;
-  box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.55);
+  box-shadow: 0 0 20px #6c63ff, 0 0 40px #6c63ff55;
   animation: profileGlow 2.5s ease-in-out infinite;
 }
 
 @keyframes profileGlow {
-  0%   { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.55); }
-  50%  { box-shadow: 0 0 0 18px rgba(108, 99, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0); }
+  0%   { box-shadow: 0 0 20px #6c63ff, 0 0 40px #6c63ff55; }
+  50%  { box-shadow: 0 0 35px #6c63ff, 0 0 70px #6c63ff88; }
+  100% { box-shadow: 0 0 20px #6c63ff, 0 0 40px #6c63ff55; }
 }
 
 @media (max-width: 768px) {
   .profile-photo {
-    width: 160px;
-    height: 160px;
+    width: 130px;
+    height: 130px;
   }
 }
 

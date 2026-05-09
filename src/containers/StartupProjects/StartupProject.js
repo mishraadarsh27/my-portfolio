@@ -4,17 +4,27 @@ import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
-// Maps a project's first tech tag to a gradient palette
-const TECH_GRADIENTS = {
-  "React.js": "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
-  "Python":   "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)",
-  "Blockchain": "linear-gradient(135deg, #0f0c29, #302b63, #24243e)"
+// Per-project gradient + hover glow (keyed by project name for precision)
+const PROJECT_STYLES = {
+  "MediParse AI": {
+    gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+    glow: "0 0 20px #0f3460"
+  },
+  "Safe Transit": {
+    gradient: "linear-gradient(135deg, #0d1f0d 0%, #1a3a1a 50%, #2d5a27 100%)",
+    glow: "0 0 20px #2d5a27"
+  },
+  "Monad Polls": {
+    gradient: "linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #6c63ff 100%)",
+    glow: "0 0 20px #6c63ff"
+  }
 };
 
-function getGradient(techTags) {
-  if (!techTags || techTags.length === 0)
-    return "linear-gradient(135deg, #1a1a2e, #4a4a8a)";
-  return TECH_GRADIENTS[techTags[0]] || "linear-gradient(135deg, #1a1a2e, #4a4a8a)";
+function getProjectStyle(projectName) {
+  return PROJECT_STYLES[projectName] || {
+    gradient: "linear-gradient(135deg, #1a1a2e, #4a4a8a)",
+    glow: "0 0 20px #6c63ff"
+  };
 }
 
 const ProjectCard = React.memo(function ProjectCard({project, isDark}) {
@@ -46,15 +56,21 @@ const ProjectCard = React.memo(function ProjectCard({project, isDark}) {
             loading="lazy"
           />
         </div>
-      ) : (
-        <div
-          className="project-card-gradient-preview"
-          style={{background: getGradient(project.techTags)}}
-          aria-hidden="true"
-        >
-          <span className="project-preview-title">{project.projectName}</span>
-        </div>
-      )}
+      ) : (() => {
+        const ps = getProjectStyle(project.projectName);
+        return (
+          <div
+            className="project-card-gradient-preview"
+            style={{
+              background: ps.gradient,
+              "--hover-glow": ps.glow
+            }}
+            aria-hidden="true"
+          >
+            <span className="project-preview-title">{project.projectName}</span>
+          </div>
+        );
+      })()}
 
       <div className="project-detail">
         <h3 className={isDark ? "dark-mode card-title" : "card-title"}>
