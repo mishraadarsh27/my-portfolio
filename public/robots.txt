@@ -1,2 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
+
+Sitemap: https://mishraadarsh27.github.io/my-portfolio/sitemap.xml

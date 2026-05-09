@@ -23,7 +23,7 @@ const greeting = {
   username: "Adarsh Kumar",
   title: "Hi all, I'm Adarsh",
   subTitle: emoji(
-    "A dedicated Full Stack Developer 🚀 with a passion for building high-performance web applications. Expertise in React.js, Python, and cloud technologies, complemented by a strong foundation in Data Structures and Algorithms."
+    "A Full Stack Developer 🚀 specializing in Python Web Development & React.js. I build fast, clean, and scalable web applications — from robust backends (Flask, Django, FastAPI) to pixel-perfect frontends."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1_uUDN1rdJUJmIeusi9y_NVYViCQu_3vA/view?usp=sharing", // Set to non-empty to show the button
@@ -169,25 +169,79 @@ const educationInfo = {
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
+// Skill chips grouped by category
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: false, // Disabled — using skill chips instead
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Frontend/Design",
+      progressPercentage: "90%"
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%"
+      progressPercentage: "75%"
     },
     {
       Stack: "Programming",
-      progressPercentage: "60%"
+      progressPercentage: "70%"
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false,
+  // Grouped skill chips for the new UI
+  skillGroups: [
+    {
+      category: "Backend",
+      icon: "fas fa-server",
+      color: "#3a7bd5",
+      skills: [
+        { name: "Python", icon: "fab fa-python" },
+        { name: "Flask", icon: "fas fa-flask" },
+        { name: "FastAPI", icon: "fas fa-bolt" },
+        { name: "Django", icon: "fas fa-layer-group" },
+        { name: "REST APIs", icon: "fas fa-exchange-alt" },
+        { name: "JWT Auth", icon: "fas fa-lock" }
+      ]
+    },
+    {
+      category: "Frontend",
+      icon: "fas fa-desktop",
+      color: "#6c63ff",
+      skills: [
+        { name: "React.js", icon: "fab fa-react" },
+        { name: "JavaScript", icon: "fab fa-js" },
+        { name: "HTML5", icon: "fab fa-html5" },
+        { name: "CSS3", icon: "fab fa-css3-alt" },
+        { name: "Tailwind CSS", icon: "fab fa-css3" },
+        { name: "SCSS", icon: "fab fa-sass" }
+      ]
+    },
+    {
+      category: "Languages",
+      icon: "fas fa-code",
+      color: "#00d2ff",
+      skills: [
+        { name: "Python", icon: "fab fa-python" },
+        { name: "JavaScript", icon: "fab fa-js" },
+        { name: "C++", icon: "fas fa-code" },
+        { name: "Java", icon: "fab fa-java" },
+        { name: "SQL", icon: "fas fa-database" }
+      ]
+    },
+    {
+      category: "Tools & Cloud",
+      icon: "fas fa-tools",
+      color: "#43ce57",
+      skills: [
+        { name: "Git", icon: "fab fa-git-alt" },
+        { name: "Docker", icon: "fab fa-docker" },
+        { name: "PostgreSQL", icon: "fas fa-database" },
+        { name: "MySQL", icon: "fas fa-server" },
+        { name: "Supabase", icon: "fas fa-cloud" },
+        { name: "Vercel", icon: "fas fa-rocket" }
+      ]
+    }
+  ]
 };
 
 // Work experience section
@@ -215,10 +269,11 @@ const bigProjects = {
       image: "",
       projectName: "MediParse AI",
       projectDesc:
-        "An advanced AI-driven medical report analysis tool that extracts and summarizes critical health metrics from complex documents. Built with React.js and Python, it features a highly intuitive dashboard for patient data visualization.",
+        "An AI-driven platform that parses complex medical reports and extracts key health metrics — solving the problem of unreadable medical documents for patients and doctors alike.",
+      techTags: ["React.js", "Python", "Flask", "AI/ML", "Vercel"],
       footerLink: [
         {
-          name: "Visit Website",
+          name: "Live Demo",
           url: "https://mediparse-ai.vercel.app/"
         },
         {
@@ -231,10 +286,11 @@ const bigProjects = {
       image: "",
       projectName: "Safe Transit",
       projectDesc:
-        "A comprehensive transit management system designed to optimize route safety and tracking. Implemented using real-time data processing and a responsive frontend to ensure a seamless experience for commuters.",
+        "A smart transit management system that solves commuter safety and route-tracking challenges with real-time data processing and a cross-device responsive interface.",
+      techTags: ["React.js", "Node.js", "REST API", "Supabase"],
       footerLink: [
         {
-          name: "Visit Website",
+          name: "Live Demo",
           url: "https://safe-journey-hub.vercel.app/"
         },
         {
@@ -247,10 +303,11 @@ const bigProjects = {
       image: "",
       projectName: "Monad Polls",
       projectDesc:
-        "A decentralized and transparent polling platform built on the Monad blockchain ecosystem. Focuses on secure data handling and real-time result aggregation with a modern, high-fidelity user interface.",
+        "A decentralized polling platform on the Monad blockchain, providing transparent and tamper-proof voting with real-time result aggregation and a modern UI.",
+      techTags: ["React.js", "Blockchain", "Monad", "JavaScript"],
       footerLink: [
         {
-          name: "Visit Website",
+          name: "Live Demo",
           url: "https://monad-polls.vercel.app"
         },
         {

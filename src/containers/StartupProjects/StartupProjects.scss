@@ -1,90 +1,185 @@
 @import "../../_globalColor";
 
+$purple: #6c63ff;
+$blue:   #3a7bd5;
+
+// ── Card image / placeholder ─────────────────────────────────────────────────
+
 .card-image {
   max-width: 100%;
   height: auto;
   width: 250px;
+  border-radius: 8px;
 }
+
+.project-card-icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  font-size: 3rem;
+  background: linear-gradient(135deg, rgba($purple, 0.08), rgba($blue, 0.08));
+  border-radius: 12px;
+  color: $purple;
+  margin-bottom: 12px;
+}
+
+// ── Text ─────────────────────────────────────────────────────────────────────
+
 .card-title {
   color: $titleColor;
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin: 15px 0 0 0;
+  margin: 12px 0 8px 0;
+  line-height: 1.3;
 }
 .card-subtitle {
   color: $cardSubtitle;
-  font-size: 17px;
-  line-height: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
 }
+
+// ── Tech tags ────────────────────────────────────────────────────────────────
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tech-tag {
+  background: rgba($purple, 0.1);
+  color: $purple;
+  border: 1px solid rgba($purple, 0.3);
+  border-radius: 50px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+// ── Card shell ───────────────────────────────────────────────────────────────
+
 .project-card {
   display: flex;
   flex-direction: column;
   background-color: $lightBackground2;
-  padding: 1.5rem;
-  border-radius: 10px;
+  padding: 1.75rem;
+  border-radius: 16px;
   border: 1px solid $lightBorder1;
-  justify-content: center;
 }
+
 .project-card-light {
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba($purple, 0.18);
+    border-color: rgba($purple, 0.4);
+  }
 }
 
 .project-card-dark {
-  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba($purple, 0.25);
+    border-color: rgba($purple, 0.5);
+  }
 }
 
 .project-detail {
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-.project-card-light:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
-}
-.project-card-dark:hover {
-  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
-}
+
 .project-image {
   position: relative;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
+
+// ── Action buttons ────────────────────────────────────────────────────────────
+
+.project-card-footer {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+
+  &:focus-visible {
+    outline: 3px solid $purple;
+    outline-offset: 3px;
+  }
+}
+
+.project-btn-primary {
+  background: linear-gradient(135deg, $purple 0%, #9b59b6 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba($purple, 0.35);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba($purple, 0.5);
+  }
+}
+
+.project-btn-secondary {
+  background: transparent;
+  color: $purple;
+  border: 2px solid rgba($purple, 0.5);
+
+  &:hover {
+    background: rgba($purple, 0.1);
+    border-color: $purple;
+    transform: translateY(-2px);
+  }
+}
+
+// ── Grid layout ───────────────────────────────────────────────────────────────
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem 1rem;
+  gap: 1.5rem;
 }
 
-.project-card-footer span.project-tag {
-  background: $buttonColor;
-  color: $lightBackground3;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 4px;
-  display: inline-flex;
-  font-size: 0.75rem;
-  height: 2em;
-  justify-content: center;
-  white-space: nowrap;
-  line-height: 1.5;
-  margin: 0 0.5rem 0.5rem 0;
-  padding: 0 0.75em;
-  cursor: pointer;
-  transition: 0.2s ease-in;
-}
+// ── Responsive ────────────────────────────────────────────────────────────────
 
 @media (max-width: 768px) {
   .project-subtitle {
     font-size: 16px;
     text-align: center;
+  }
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 }

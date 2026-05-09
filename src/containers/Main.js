@@ -5,6 +5,7 @@ import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import StackProgress from "./skillProgress/skillProgress";
+import SkillChips from "../components/skillChips/SkillChips";
 import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
@@ -73,10 +74,14 @@ const Main = () => {
                   <>
                     <Greeting {...props} />
                     <Skills {...props} />
+                    <SkillChips />
                     <StackProgress {...props} />
+                    <StartupProject {...props} />
                     <Projects {...props} />
                     <Twitter {...props} />
                     <Podcast {...props} />
+                    <Profile {...props} />
+                    <Contact {...props} />
                   </>
                 )}
               />

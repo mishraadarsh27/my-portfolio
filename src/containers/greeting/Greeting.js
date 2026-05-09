@@ -5,7 +5,6 @@ import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -20,6 +19,7 @@ export default function Greeting() {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
+              {/* ONE h1 per page — hero section only */}
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
@@ -27,6 +27,10 @@ export default function Greeting() {
                 {greeting.title}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
+              <p className="greeting-role-badge">
+                <i className="fab fa-python" aria-hidden="true"></i>
+                {" "}&nbsp;Python Web Developer &amp; React.js Specialist
+              </p>
               <p
                 className={
                   isDark
@@ -39,24 +43,23 @@ export default function Greeting() {
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
+                <a
+                  className="main-button contact-btn"
+                  href="#contact"
+                  aria-label="Contact Adarsh Kumar"
+                >
+                  Contact Me
+                </a>
                 {greeting.resumeLink && (
                   <a
-                    href={
-                      greeting.resumeLink.startsWith("http")
-                        ? greeting.resumeLink
-                        : require("./resume.pdf")
-                    }
+                    href={greeting.resumeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    download={
-                      !greeting.resumeLink.startsWith("http")
-                        ? "Resume.pdf"
-                        : undefined
-                    }
-                    className="download-link-button"
+                    className="main-button resume-btn"
+                    aria-label="Download Adarsh Kumar's Resume"
                   >
-                    <Button text="Download my resume" />
+                    <i className="fas fa-download" aria-hidden="true"></i>
+                    {" "}Download Resume
                   </a>
                 )}
               </div>
@@ -67,9 +70,10 @@ export default function Greeting() {
               <DisplayLottie animationData={landingPerson} />
             ) : (
               <img
-                alt="man sitting on table"
+                alt="Adarsh Kumar — Full Stack Developer working at a computer"
                 src={require("../../assets/images/manOnTable.svg")}
-              ></img>
+                loading="lazy"
+              />
             )}
           </div>
         </div>

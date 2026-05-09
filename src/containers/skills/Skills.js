@@ -13,7 +13,7 @@ export default function Skills() {
     return null;
   }
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
+    <section className={isDark ? "dark-mode main" : "main"} id="skills" aria-label="Skills">
       <div className="skills-main-div">
         <Fade left duration={1000}>
           <div className="skills-image-div">
@@ -21,19 +21,20 @@ export default function Skills() {
               <DisplayLottie animationData={codingPerson} />
             ) : (
               <img
-                alt="Man Working"
+                alt="Adarsh Kumar coding — software developer at work"
                 src={require("../../assets/images/developerActivity.svg")}
-              ></img>
+                loading="lazy"
+              />
             )}
           </div>
         </Fade>
         <Fade right duration={1000}>
           <div className="skills-text-div">
-            <h1
+            <h2
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
             >
               {skillsSection.title}{" "}
-            </h1>
+            </h2>
             <p
               className={
                 isDark
@@ -63,6 +64,6 @@ export default function Skills() {
           </div>
         </Fade>
       </div>
-    </div>
+    </section>
   );
 }

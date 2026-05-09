@@ -58,3 +58,33 @@ body::before {
     line-height: normal;
   }
 }
+
+/* ── Global Accessibility: focus-visible keyboard navigation ── */
+*:focus {
+  outline: none; /* Remove default; handled below */
+}
+*:focus-visible {
+  outline: 3px solid #6c63ff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Anchor section scroll offset — prevents header overlap */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Lazy-load images: avoid layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -15,14 +15,11 @@
 
 .greeting-main {
   display: flex;
+  align-items: center;
 }
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -31,27 +28,94 @@
 }
 
 .empty-div {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .button-greeting-div {
   display: flex;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+  align-items: center;
 }
-.download-link-button {
+
+// Standalone inline buttons in greeting (not using the Button component)
+.main-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
   text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  letter-spacing: 0.5px;
+
+  &:focus-visible {
+    outline: 3px solid #6c63ff;
+    outline-offset: 4px;
+  }
+}
+
+.contact-btn {
+  background-color: transparent;
+  border-color: $buttonColor;
+  color: $buttonColor;
+
+  &:hover {
+    background-color: $buttonColor;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.4);
+  }
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, #6c63ff 0%, #9b59b6 100%);
+  color: #fff !important;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(108, 99, 255, 0.6);
+    background: linear-gradient(135deg, #7c75ff 0%, #ab69c6 100%);
+  }
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 68px;
+  font-weight: 800;
   line-height: 1.1;
   color: $textColor !important;
   transition: all 0.3s ease;
-  
+  letter-spacing: -1px;
+
   &:hover {
     animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-    color: #00d2ff !important;
+    color: #6c63ff !important;
   }
+}
+
+// Role badge — visually highlights specialization
+.greeting-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.12) 0%, rgba(58, 123, 213, 0.12) 100%);
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  color: #6c63ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin: 18px 0 22px 0;
+  letter-spacing: 0.3px;
+
+  i { font-size: 1.1rem; }
 }
 
 @keyframes glitch {
@@ -64,12 +128,15 @@
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 540px;
 }
 
 .greeting-image-div {
   animation: floating 3s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes floating {
@@ -92,56 +159,45 @@
 }
 
 @keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(9deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 /* Media Query */
 @media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-p {
-    font-size: 20px;
-  }
+  .greeting-text { font-size: 50px; }
+  .greeting-text-p { font-size: 18px; }
 }
+
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
   .greeting-text {
-    font-size: 30px;
+    font-size: 36px;
     text-align: center;
+  }
+  .greeting-role-badge {
+    display: flex;
+    justify-content: center;
+    margin: 14px auto;
   }
   .greeting-text-p {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.6;
     text-align: center;
+    max-width: 100%;
   }
   .greeting-main {
     display: block;
   }
   .greeting-image-div {
-    height: 256px;
+    height: 280px;
   }
 }
 

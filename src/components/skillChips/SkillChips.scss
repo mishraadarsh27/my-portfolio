@@ -1,0 +1,111 @@
+@import "../../_globalColor";
+
+.skill-chips-section {
+  width: 90%;
+  margin: 0 auto 60px auto;
+  padding: 40px 0 20px 0;
+}
+
+.skill-chips-main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+  background: linear-gradient(135deg, #6c63ff 0%, #3a7bd5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Google Sans Regular", sans-serif;
+}
+
+.skill-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.skill-group {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(108, 99, 255, 0.18);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(108, 99, 255, 0.45);
+    box-shadow: 0 12px 40px rgba(108, 99, 255, 0.12);
+  }
+}
+
+.dark-mode .skill-group {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+
+  i {
+    font-size: 1.4rem;
+  }
+}
+
+.skill-group-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.skill-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid color-mix(in srgb, var(--chip-color) 30%, transparent);
+  color: var(--chip-color);
+  transition: all 0.25s ease;
+  cursor: default;
+  letter-spacing: 0.2px;
+
+  i {
+    font-size: 0.95rem;
+  }
+
+  &:hover {
+    background: var(--chip-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Fallback for browsers without color-mix support
+@supports not (color: color-mix(in srgb, red, blue)) {
+  .skill-chip {
+    border-color: rgba(108, 99, 255, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-groups-grid {
+    grid-template-columns: 1fr;
+  }
+  .skill-chips-main-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
