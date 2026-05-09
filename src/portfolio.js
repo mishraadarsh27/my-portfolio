@@ -198,7 +198,7 @@ const bigProjects = {
       image: "",
       projectName: "MediParse AI",
       projectDesc:
-        "Developed an AI-powered medical report parser to extract and summarize health insights. Designed a responsive React.js interface improving user experience.",
+        "An advanced AI-driven medical report analysis tool that extracts and summarizes critical health metrics from complex documents. Built with React.js and Python, it features a highly intuitive dashboard for patient data visualization.",
       footerLink: [
         {
           name: "Visit Website",
@@ -214,7 +214,7 @@ const bigProjects = {
       image: "",
       projectName: "Safe Transit",
       projectDesc:
-        "Built a transportation platform with route tracking and user interaction features. Implemented responsive UI design ensuring cross-device compatibility.",
+        "A comprehensive transit management system designed to optimize route safety and tracking. Implemented using real-time data processing and a responsive frontend to ensure a seamless experience for commuters.",
       footerLink: [
         {
           name: "Visit Website",
@@ -230,7 +230,7 @@ const bigProjects = {
       image: "",
       projectName: "Monad Polls",
       projectDesc:
-        "Developed a real-time polling platform with dynamic UI components. Implemented voting and result visualization features.",
+        "A decentralized and transparent polling platform built on the Monad blockchain ecosystem. Focuses on secure data handling and real-time result aggregation with a modern, high-fidelity user interface.",
       footerLink: [
         {
           name: "Visit Website",
