@@ -52,7 +52,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Technical Prowess",
-  subTitle: "ARCHITECTING THE FUTURE WITH PYTHON, SCALABLE BACKENDS, AND HIGH-PERFORMANCE WEB SOLUTIONS",
+  subTitle: "Python Web Developer · React.js · Cloud Deployments · REST APIs",
   skills: [
     emoji(
       "⚡ Architecting scalable Python backends with Flask, FastAPI & Django — powering RESTful APIs with JWT/OAuth2 security"
