@@ -51,17 +51,26 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "Technical Prowess",
+  subTitle: "ARCHITECTING THE FUTURE WITH PYTHON, SCALABLE BACKENDS, AND HIGH-PERFORMANCE WEB SOLUTIONS",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web applications"
+      "⚡ Masterful implementation of Backend architectures using Python ecosystems: Flask, FastAPI, and Django for mission-critical applications"
     ),
     emoji(
-      "⚡ Experience in building and deploying scalable applications using React.js and Python (Flask)"
+      "⚡ Engineered high-throughput RESTful APIs with advanced security protocols including JWT, OAuth2, and industry-standard authentication"
     ),
     emoji(
-      "⚡ Skilled in REST API development, CRUD operations, authentication, and responsive design"
+      "⚡ Building sophisticated, pixel-perfect Front-end interfaces using React.js and modern state management patterns"
+    ),
+    emoji(
+      "⚡ Expert-level database orchestration with PostgreSQL and MySQL, leveraging advanced ORMs and query optimization techniques"
+    ),
+    emoji(
+      "⚡ Streamlining development workflows with Docker containerization and automated CI/CD pipelines for rapid, reliable deployment"
+    ),
+    emoji(
+      "⚡ Deep commitment to writing clean, maintainable code following SOLID principles and industry best practices"
     )
   ],
 
@@ -70,48 +79,56 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "Python",
+      fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "Django",
+      fontAwesomeClassname: "fab fa-django"
+    },
+    {
+      skillName: "Flask",
+      fontAwesomeClassname: "fas fa-flask"
     },
     {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "reactjs",
+      skillName: "ReactJS",
       fontAwesomeClassname: "fab fa-react"
     },
     {
-      skillName: "nodejs",
+      skillName: "NodeJS",
       fontAwesomeClassname: "fab fa-node"
     },
     {
-      skillName: "sql-database",
+      skillName: "PostgreSQL",
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      skillName: "MySQL",
+      fontAwesomeClassname: "fas fa-server"
     },
     {
-      skillName: "cpp",
-      fontAwesomeClassname: "fas fa-code"
+      skillName: "HTML5",
+      fontAwesomeClassname: "fab fa-html5"
     },
     {
-      skillName: "java",
-      fontAwesomeClassname: "fab fa-java"
+      skillName: "CSS3",
+      fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
       skillName: "Tailwind CSS",
       fontAwesomeClassname: "fab fa-css3"
     },
     {
-      skillName: "Firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git-alt"
     }
   ],
   display: true // Set false to hide this section, defaults to true
