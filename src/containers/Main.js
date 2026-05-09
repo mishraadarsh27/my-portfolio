@@ -19,6 +19,7 @@ import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
 import Profile from "./profile/Profile";
+import Contact from "./contact/Contact";
 import SplashScreen from "./splashScreen/SplashScreen";
 import Cursor from "../components/cursor/Cursor";
 import {splashScreen} from "../portfolio";
