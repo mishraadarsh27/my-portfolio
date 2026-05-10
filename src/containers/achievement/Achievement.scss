@@ -1,34 +1,301 @@
 @import "../../_globalColor";
 
+/* ── Page title ── */
+.achievement-header-block {
+  padding: 60px 20px 10px;
+  text-align: center;
+}
+
 .achievement-heading {
   font-size: 56px;
   font-weight: 400;
   line-height: normal;
   margin: 0px;
 }
+
 .achievement-subtitle {
   text-transform: uppercase;
   margin: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
+
 .subTitle {
   color: $subTitle;
 }
 
-/* Media Query */
+/* ── Section wrapper ── */
+.ach-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+.ach-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+/* ── Competitive Programming cards ── */
+.cp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.cp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.25);
+  }
+}
+
+.cp-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cp-platform-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cp-platform-icon {
+  font-size: 1.6rem;
+  opacity: 0.85;
+}
+
+.cp-stats-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cp-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.cp-stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.cp-stat-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.cp-rank-val {
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.cp-view-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ── Certification detail cards ── */
+.cert-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 28px 24px;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.25);
+  }
+}
+
+.cert-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(108, 99, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-icon {
+  font-size: 1.3rem;
+  color: #d4af37;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.cert-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cert-org {
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.cert-year {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: #4f46e5;
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.4);
+  }
+}
+
+/* ── Hackathon timeline ── */
+.hackathon-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 20px;
+}
+
+.hackathon-item {
+  position: relative;
+  padding: 0 0 36px 28px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.hackathon-dot {
+  position: absolute;
+  left: -7px;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #6c63ff;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.6);
+}
+
+.hackathon-content {
+  padding: 20px 24px;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.25);
+  }
+}
+
+.hackathon-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.hackathon-event {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hackathon-year {
+  font-size: 0.82rem;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.hackathon-achievement {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: rgba(108, 99, 255, 0.15);
+  color: #6c63ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hackathon-desc {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Media Queries ── */
 @media (max-width: 1380px) {
   .achievement-heading {
     font-size: 40px;
   }
 }
+
 @media (max-width: 768px) {
   .achievement-heading {
     font-size: 30px;
     text-align: center;
   }
+
   .achievement-subtitle {
     font-size: 16px;
     line-height: normal;
     text-align: center;
+  }
+
+  .cp-cards-grid,
+  .cert-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hackathon-timeline {
+    padding-left: 14px;
   }
 }

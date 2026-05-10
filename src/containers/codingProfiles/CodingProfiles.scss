@@ -1,11 +1,18 @@
 @import "../../_globalColor";
 
+/* ── Page heading block ── */
+.coding-stats-header-block {
+  padding: 60px 20px 10px;
+  text-align: center;
+}
+
 .coding-stats-title {
   font-size: 40px;
   line-height: 1.1;
   font-family: "Google Sans Regular";
   text-align: center;
-  margin-top: 50px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .coding-stats-subtitle {
@@ -17,13 +24,31 @@
   margin-bottom: 30px;
 }
 
+/* ── Section wrapper ── */
+.cs-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+.cs-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+/* ── Competitive Programming cards ── */
 .coding-profiles-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .coding-profile-card {
@@ -35,8 +60,8 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px rgba(108, 99, 255, 0.25);
   }
 }
 
@@ -222,8 +247,76 @@
   color: #ff9800;
 }
 
+/* ── GitHub Stats ── */
+.github-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.github-stat-card {
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px rgba(108, 99, 255, 0.25);
+  }
+
+  &--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.github-card-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  i {
+    font-size: 0.95rem;
+  }
+}
+
+.github-stat-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.github-heatmap-card {
+  grid-column: 1 / -1;
+}
+
+.github-heatmap-img {
+  width: 100%;
+}
+
+/* ── Media Queries ── */
+@media (max-width: 900px) {
+  .github-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .github-stat-card--wide {
+    grid-column: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .coding-profiles-div {
     grid-template-columns: 1fr;
+  }
+
+  .coding-stats-title {
+    font-size: 28px;
   }
 }
