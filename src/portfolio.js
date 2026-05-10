@@ -132,7 +132,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Oriental Institute of Science and Technology",
-      logo: "",
+      logo: "https://upload.wikimedia.org/wikipedia/en/2/2e/OIST_Bhopal_Logo.png",
       subHeader: "B.Tech in Computer Science & Engineering",
       duration: "May 2023 - Present",
       desc: "CGPA: 8.41",
@@ -143,7 +143,7 @@ const educationInfo = {
     },
     {
       schoolName: "Don Bosco Convent School",
-      logo: "",
+      logo: "https://dbcsjhanjharpur.edu.in/images/logo.png",
       subHeader: "Class XII",
       duration: "2022",
       desc: "Jhanjharpur, Bihar",
@@ -151,7 +151,7 @@ const educationInfo = {
     },
     {
       schoolName: "Don Bosco Convent School",
-      logo: "",
+      logo: "https://dbcsjhanjharpur.edu.in/images/logo.png",
       subHeader: "Class X",
       duration: "2020",
       desc: "Jhanjharpur, Bihar",
@@ -415,7 +415,7 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 const competitiveProgramming = {
   title: "Competitive Programming",
@@ -426,9 +426,9 @@ const competitiveProgramming = {
       platform: "LeetCode",
       username: "i_adarshmishra",
       profileLink: "https://leetcode.com/i_adarshmishra",
-      solved: 268,
-      easy: 142,
-      medium: 110,
+      solved: 275,
+      easy: 145,
+      medium: 114,
       hard: 16,
       rating: "1596",
       ranking: "208,004 (Global)",
@@ -439,11 +439,11 @@ const competitiveProgramming = {
       platform: "GeeksforGeeks",
       username: "adarsh22mishra",
       profileLink: "https://auth.geeksforgeeks.org/user/adarsh22mishra",
-      solved: 285,
-      easy: 88, // Basic (13) + Easy (75)
-      medium: 164,
+      solved: 295,
+      easy: 92, // Basic (13) + Easy (79)
+      medium: 170,
       hard: 33,
-      score: "1072",
+      score: "1105",
       ranking: "53 (Institute Rank)",
       topics: ["Tree", "Array", "DP", "Matrix", "Strings"],
       languages: ["C++", "Java"]
