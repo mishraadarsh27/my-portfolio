@@ -82,7 +82,7 @@ export default function Greeting() {
               </div>
             </div>
           </div>
-          <div className="greeting-image-div">
+          <div className="greeting-image-div" style={{flexShrink: 0, alignItems: "center"}}>
             {/* Show profile photo if available, else fall back to animation */}
             <ProfilePhoto />
             {illustration.animated ? (
