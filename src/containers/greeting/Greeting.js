@@ -15,7 +15,7 @@ function ProfilePhoto() {
   return (
     <div className="profile-photo-wrapper">
       <img
-        src="/my-portfolio/profile.jpg"
+        src={process.env.PUBLIC_URL + "/profile.jpg"}
         alt="Adarsh Kumar - Full Stack Developer"
         className="profile-photo"
         onError={() => setImgError(true)}

@@ -6,7 +6,9 @@
   margin-left: auto;
   width: 100%;
   max-width: 350px;
-  height: auto;
+  height: 350px;
+  object-fit: cover;
+  object-position: center 10%;
   box-shadow: $lightBoxShadow 0 30px 30px -30px;
   transition: all 0.3s ease-out;
 }
@@ -89,7 +91,9 @@
     margin-right: auto;
     width: 100%;
     max-width: 250px;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
+    object-position: center 10%;
   }
 
   .profile-image:hover {
