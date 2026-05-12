@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState, useEffect} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -19,6 +19,31 @@ import {NavLink, Link} from "react-router-dom";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
+  const [activeNav, setActiveNav] = useState("");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveNav("skills");
+          } else {
+            setActiveNav("");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const skillsSection = document.getElementById("skills");
+    if (skillsSection) {
+      observer.observe(skillsSection);
+    }
+
+    return () => {
+      if (skillsSection) observer.unobserve(skillsSection);
+    };
+  }, []);
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -56,12 +81,12 @@ function Header() {
           </li>
           {viewSkills && (
             <li>
-              <NavLink
-                to="/skills"
-                activeStyle={{fontWeight: "bold"}}
+              <a
+                href="#skills"
+                style={activeNav === "skills" ? {fontWeight: "bold"} : {}}
               >
                 Skills
-              </NavLink>
+              </a>
             </li>
           )}
           {viewExperience && (
