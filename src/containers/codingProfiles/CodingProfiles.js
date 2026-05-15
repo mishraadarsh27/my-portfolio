@@ -180,7 +180,7 @@ export default function CodingProfiles() {
                 <i className="fas fa-chart-bar" /> Overview
               </h4>
               <img
-                src="https://github-readme-stats.vercel.app/api?username=mishraadarsh27&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6c63ff&icon_color=6c63ff&count_private=true"
+                src="https://github-readme-stats-eight-theta.vercel.app/api?username=mishraadarsh27&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6c63ff&icon_color=6c63ff&count_private=true"
                 alt="GitHub Stats"
                 className="github-stat-img"
               />
@@ -195,7 +195,7 @@ export default function CodingProfiles() {
                 <i className="fas fa-code" /> Top Languages
               </h4>
               <img
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=mishraadarsh27&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6c63ff"
+                src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=mishraadarsh27&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6c63ff"
                 alt="Top Languages"
                 className="github-stat-img"
               />
