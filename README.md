@@ -4,7 +4,7 @@
 
 Welcome to my personal portfolio repository! This project showcases my journey as an aspiring Full Stack Developer, my technical skills, academic achievements, and the projects I've built.
 
-## 🌟 About Me
+##  About Me
 I am a passionate Full Stack Developer with a strong foundation in **Data Structures and Algorithms**. I love building scalable web applications and exploring new technologies. Currently, I am focused on mastering React.js and Python-based backends.
 
 ## 🛠️ Tech Stack
