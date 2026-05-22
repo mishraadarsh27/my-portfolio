@@ -26,7 +26,7 @@ I am a passionate Full Stack Developer with a strong foundation in **Data Struct
   - [![GeeksforGeeks](https://img.shields.io/badge/-GeeksforGeeks-298D46?style=flat-square&logo=GeeksforGeeks&logoColor=white)](https://auth.geeksforgeeks.org/user/adarsh22mishra)
   - [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/adarsh-mishra-9b394b28b/)
 
-## 🚀 Key Projects
+##  Key Projects
 - **MediParse AI:** An AI-powered platform for parsing and managing medical prescriptions.
 - **Safe Transit:** A smart transit management system for safer commuting.
 - **Monad Polls:** A decentralized polling application built on the Monad ecosystem.
