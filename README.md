@@ -1,4 +1,4 @@
-# Adarsh Kumar | Full Stack Developer Portfolio 🚀
+# Adarsh Kumar | Full Stack Developer Portfolio 
 
 **Live Demo:** [https://mishraadarsh27.github.io/my-portfolio/](https://mishraadarsh27.github.io/my-portfolio/)
 
