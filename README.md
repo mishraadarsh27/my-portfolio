@@ -7,7 +7,7 @@ Welcome to my personal portfolio repository! This project showcases my journey a
 ##  About Me
 I am a passionate Full Stack Developer with a strong foundation in **Data Structures and Algorithms**. I love building scalable web applications and exploring new technologies. Currently, I am focused on mastering React.js and Python-based backends.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
