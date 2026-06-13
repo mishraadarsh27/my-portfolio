@@ -31,12 +31,12 @@ I am a passionate Full Stack Developer with a strong foundation in **Data Struct
 - **Safe Transit:** A smart transit management system for safer commuting.
 - **Monad Polls:** A decentralized polling application built on the Monad ecosystem.
 
-## 🎓 Education
+##  Education
 - **Bachelor of Technology in Computer Science**
   *Oriental Institute of Science and Technology (OIST), Bhopal*
   *Current CGPA: 8.41*
 
-## 🏆 Achievements & Certifications
+##  Achievements & Certifications
 - **Java Full Stack Development** (EduSkills - AICTE Certified)
 - **AI Foundation** (Oracle)
 - **Programming in Java (Elite)** (NPTEL)
