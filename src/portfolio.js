@@ -426,7 +426,7 @@ const competitiveProgramming = {
       platform: "LeetCode",
       username: "i_adarshmishra",
       profileLink: "https://leetcode.com/i_adarshmishra",
-      solved: 275,
+      solved: 327,
       easy: 145,
       medium: 114,
       hard: 16,
