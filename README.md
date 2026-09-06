@@ -1,6 +1,6 @@
 # Adarsh Kumar | Full Stack Developer Portfolio 
 
-**Live Demo:** [https://mishraadarsh27.github.io/my-portfolio/](https://mishraadarsh27.github.io/my-portfolio/)
+*Live Demo:* [https://mishraadarsh27.github.io/my-portfolio/](https://mishraadarsh27.github.io/my-portfolio/)
 
 Welcome to my personal portfolio repository! This project showcases my journey as an aspiring Full Stack Developer, my technical skills, academic achievements, and the projects I've built.
 
